@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>leetcode每日一题 P812 最大三角形面积</title>
+      <link href="/posts/812/"/>
+      <url>/posts/812/</url>
+      
+        <content type="html"><![CDATA[<hr><div class="timeline blue"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>时间轴</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-09-27</p></div></div><div class='timeline-item-content'><p>init</p></div></div></div><hr><p>题目：<br><div class="tag link"><a class="link-card" title="P812 最大三角形面积" href="https://leetcode.cn/problems/largest-triangle-area/?envType=daily-question&envId=2025-09-27"><div class="left"><img src="https://leetcode.cn/favicon.ico"/></div><div class="right"><p class="text">P812 最大三角形面积</p><p class="url">https://leetcode.cn/problems/largest-triangle-area/?envType=daily-question&envId=2025-09-27</p></div></a></div></p><p>此题不用考虑太多，主要是考察几何知识，直接枚举即可。<br>三角形计算面积为：</p><script type="math/tex; mode=display">S = \frac{1}{2} \left| x_1(y_2 - y_3) + x_2(y_3 - y_1) + x_3(y_1 - y_2) \right|</script><p>假设这三个点，第一个点i在points数组左边，第二个点的数组位置位于两点之间，第三个点在右边</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> std::vector;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="function"><span class="type">double</span> <span class="title">largestTriangleArea</span><span class="params">(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; &amp;points)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="type">int</span> x1, x2, x3;</span><br><span class="line">    <span class="type">int</span> y1, y2, y3;</span><br><span class="line">    <span class="type">double</span> max_area = <span class="number">0</span>;</span><br><span class="line">    <span class="type">double</span> area;</span><br><span class="line"></span><br><span class="line">    n = points.<span class="built_in">size</span>();</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">      <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; n; j++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> k = j + <span class="number">1</span>; k &lt; n; k++) &#123;</span><br><span class="line">          x1 = points[i][<span class="number">0</span>];</span><br><span class="line">          x2 = points[j][<span class="number">0</span>];</span><br><span class="line">          x3 = points[k][<span class="number">0</span>];</span><br><span class="line">          y1 = points[i][<span class="number">1</span>];</span><br><span class="line">          y2 = points[j][<span class="number">1</span>];</span><br><span class="line">          y3 = points[k][<span class="number">1</span>];</span><br><span class="line">          area =</span><br><span class="line">              <span class="number">0.5</span> * std::<span class="built_in">fabs</span>(x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2));</span><br><span class="line">          <span class="keyword">if</span> (area &gt; max_area) &#123;</span><br><span class="line">            max_area = area;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> max_area;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> algorithm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> algorithm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>leetcode每日一题 P611 有效三角形的个数</title>
       <link href="/posts/611/"/>
       <url>/posts/611/</url>
