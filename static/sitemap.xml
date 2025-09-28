@@ -245,7 +245,7 @@
   </url>
   
   <url>
-    <loc>https://even629.com/music/index.html</loc>
+    <loc>https://even629.com/link/index.html</loc>
     
     <lastmod>2025-07-08</lastmod>
     
@@ -254,7 +254,7 @@
   </url>
   
   <url>
-    <loc>https://even629.com/link/index.html</loc>
+    <loc>https://even629.com/music/index.html</loc>
     
     <lastmod>2025-07-08</lastmod>
     
@@ -389,13 +389,6 @@
 
   
   <url>
-    <loc>https://even629.com/tags/C/</loc>
-    <lastmod>2025-09-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://even629.com/tags/virtualization/</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -404,6 +397,13 @@
   
   <url>
     <loc>https://even629.com/tags/emacs/</loc>
+    <lastmod>2025-09-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://even629.com/tags/C/</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -424,14 +424,14 @@
   </url>
   
   <url>
-    <loc>https://even629.com/tags/asm/</loc>
+    <loc>https://even629.com/tags/UEFI/</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://even629.com/tags/UEFI/</loc>
+    <loc>https://even629.com/tags/asm/</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -445,14 +445,14 @@
   </url>
   
   <url>
-    <loc>https://even629.com/tags/Embedded-tools/</loc>
+    <loc>https://even629.com/tags/rust/</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://even629.com/tags/rust/</loc>
+    <loc>https://even629.com/tags/Embedded-tools/</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -468,13 +468,6 @@
 
   
   <url>
-    <loc>https://even629.com/categories/C/</loc>
-    <lastmod>2025-09-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://even629.com/categories/virtualization/</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -483,6 +476,13 @@
   
   <url>
     <loc>https://even629.com/categories/emacs/</loc>
+    <lastmod>2025-09-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://even629.com/categories/C/</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -503,14 +503,14 @@
   </url>
   
   <url>
-    <loc>https://even629.com/categories/arm64/</loc>
+    <loc>https://even629.com/categories/UEFI/</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://even629.com/categories/UEFI/</loc>
+    <loc>https://even629.com/categories/arm64/</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
