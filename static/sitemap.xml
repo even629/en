@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://even629.com/posts/26/</loc>
+    
+    <lastmod>2025-09-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://even629.com/posts/27/</loc>
     
     <lastmod>2025-09-28</lastmod>
@@ -30,6 +39,15 @@
   
   <url>
     <loc>https://even629.com/posts/50000/</loc>
+    
+    <lastmod>2025-09-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://even629.com/posts/50001/</loc>
     
     <lastmod>2025-09-27</lastmod>
     
@@ -424,7 +442,7 @@
   </url>
   
   <url>
-    <loc>https://even629.com/tags/rust/</loc>
+    <loc>https://even629.com/tags/asm/</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -432,13 +450,6 @@
   
   <url>
     <loc>https://even629.com/tags/UEFI/</loc>
-    <lastmod>2025-09-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://even629.com/tags/asm/</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -453,6 +464,13 @@
   
   <url>
     <loc>https://even629.com/tags/Embedded-tools/</loc>
+    <lastmod>2025-09-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://even629.com/tags/rust/</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -503,7 +521,7 @@
   </url>
   
   <url>
-    <loc>https://even629.com/categories/rust/</loc>
+    <loc>https://even629.com/categories/arm64/</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -517,14 +535,14 @@
   </url>
   
   <url>
-    <loc>https://even629.com/categories/arm64/</loc>
+    <loc>https://even629.com/categories/tools/</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://even629.com/categories/tools/</loc>
+    <loc>https://even629.com/categories/rust/</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
