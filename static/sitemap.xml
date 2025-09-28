@@ -281,7 +281,7 @@
   </url>
   
   <url>
-    <loc>https://even629.com/charts/index.html</loc>
+    <loc>https://even629.com/categories/index.html</loc>
     
     <lastmod>2025-07-08</lastmod>
     
@@ -290,7 +290,7 @@
   </url>
   
   <url>
-    <loc>https://even629.com/categories/index.html</loc>
+    <loc>https://even629.com/charts/index.html</loc>
     
     <lastmod>2025-07-08</lastmod>
     
@@ -407,7 +407,7 @@
 
   
   <url>
-    <loc>https://even629.com/tags/emacs/</loc>
+    <loc>https://even629.com/tags/CSAPP/</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -421,7 +421,14 @@
   </url>
   
   <url>
-    <loc>https://even629.com/tags/CSAPP/</loc>
+    <loc>https://even629.com/tags/emacs/</loc>
+    <lastmod>2025-09-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://even629.com/tags/GNU/</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -449,14 +456,14 @@
   </url>
   
   <url>
-    <loc>https://even629.com/tags/programming/</loc>
+    <loc>https://even629.com/tags/virtualization/</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://even629.com/tags/virtualization/</loc>
+    <loc>https://even629.com/tags/programming/</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -472,7 +479,7 @@
 
   
   <url>
-    <loc>https://even629.com/categories/emacs/</loc>
+    <loc>https://even629.com/categories/CSAPP/</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -486,7 +493,7 @@
   </url>
   
   <url>
-    <loc>https://even629.com/categories/CSAPP/</loc>
+    <loc>https://even629.com/categories/emacs/</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -514,14 +521,14 @@
   </url>
   
   <url>
-    <loc>https://even629.com/categories/programming/</loc>
+    <loc>https://even629.com/categories/virtualization/</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://even629.com/categories/virtualization/</loc>
+    <loc>https://even629.com/categories/programming/</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

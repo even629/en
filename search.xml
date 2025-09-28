@@ -120,6 +120,8 @@
       
         <tags>
             
+            <tag> GNU </tag>
+            
             <tag> tools </tag>
             
         </tags>
@@ -145,6 +147,8 @@
       
         <tags>
             
+            <tag> GNU </tag>
+            
             <tag> tools </tag>
             
         </tags>
@@ -169,6 +173,8 @@
       
       
         <tags>
+            
+            <tag> GNU </tag>
             
             <tag> tools </tag>
             
@@ -695,6 +701,8 @@
       
         <tags>
             
+            <tag> GNU </tag>
+            
             <tag> tools </tag>
             
         </tags>
@@ -719,6 +727,8 @@
       
       
         <tags>
+            
+            <tag> GNU </tag>
             
             <tag> Linux </tag>
             
@@ -897,6 +907,8 @@
             
             <tag> emacs </tag>
             
+            <tag> GNU </tag>
+            
         </tags>
       
     </entry>
@@ -946,6 +958,8 @@
         <tags>
             
             <tag> emacs </tag>
+            
+            <tag> GNU </tag>
             
         </tags>
       
