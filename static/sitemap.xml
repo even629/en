@@ -29,15 +29,6 @@
   </url>
   
   <url>
-    <loc>https://even629.com/en/music/index.html</loc>
-    
-    <lastmod>2025-07-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://even629.com/en/link/index.html</loc>
     
     <lastmod>2025-07-08</lastmod>
@@ -47,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://even629.com/en/categories/index.html</loc>
+    <loc>https://even629.com/en/music/index.html</loc>
     
     <lastmod>2025-07-08</lastmod>
     
@@ -57,6 +48,15 @@
   
   <url>
     <loc>https://even629.com/en/charts/index.html</loc>
+    
+    <lastmod>2025-07-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://even629.com/en/categories/index.html</loc>
     
     <lastmod>2025-07-08</lastmod>
     
@@ -135,14 +135,14 @@
   </url>
   
   <url>
-    <loc>https://even629.com/en/tags/Embedded-tools/</loc>
+    <loc>https://even629.com/en/tags/tools/</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://even629.com/en/tags/tools/</loc>
+    <loc>https://even629.com/en/tags/Embedded-tools/</loc>
     <lastmod>2025-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
