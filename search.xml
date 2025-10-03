@@ -78,9 +78,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> 排序 </tag>
-            
             <tag> leetcode面试经典150题 </tag>
+            
+            <tag> 排序 </tag>
             
         </tags>
       
@@ -93,7 +93,7 @@
       <link href="/posts/50005/"/>
       <url>/posts/50005/</url>
       
-        <content type="html"><![CDATA[<hr><div class="timeline blue"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>时间轴</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-10-03</p></div></div><div class='timeline-item-content'><p>init</p></div></div></div><hr><p>在 Win11 + WSL2 archlinux 的 mirrored 网络模式下，重启后有概率会触发无法 WSL 访问网络但 Windows 可以访问的问题。</p><h1 id="ping-网关"><a href="#ping-网关" class="headerlink" title="ping 网关"></a>ping 网关</h1><p>先确认能不能 ping 通网关。</p><ul><li>如果能 ping 通 IP 但不能访问域名 → 是 DNS 问题</li><li>连 IP 都 ping 不通 → 是 网络转发 / 网卡 / 防火墙问题</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping -c 4 8.8.8.8</span><br></pre></td></tr></table></figure><h1 id="DNS-问题"><a href="#DNS-问题" class="headerlink" title="DNS 问题"></a>DNS 问题</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> emacs /etc/resolve.conf</span><br><span class="line"><span class="comment"># 写入如下配置</span></span><br><span class="line">nameserver 8.8.8.8</span><br><span class="line">nameserver 1.1.1.1</span><br></pre></td></tr></table></figure><p>为避免每次重启被覆盖，可以关闭自动生成</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> bash -c <span class="string">&quot;echo &#x27;[network]&#x27; &gt; /etc/wsl.conf&quot;</span></span><br><span class="line"><span class="built_in">sudo</span> bash -c <span class="string">&quot;echo &#x27;generateResolvConf = false&#x27; &gt;&gt; /etc/wsl.conf&quot;</span></span><br></pre></td></tr></table></figure><p>重启 WSL</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl <span class="literal">--shutdown</span></span><br></pre></td></tr></table></figure><p>查看网络是否恢复</p><h1 id="防火墙问题"><a href="#防火墙问题" class="headerlink" title="防火墙问题"></a>防火墙问题</h1><p>打开 windows 安全中心的防火墙和网络保护：<br><img src="https://cdn.jsdelivr.net/gh/even629/myPicGo/202510031217361.png" alt="防火墙和网络保护"><br>点击允许应用通过防火墙，将 C:\Windows\System32\wsl.exe 加入。<br>再次查看网络是否恢复。</p>]]></content>
+        <content type="html"><![CDATA[<hr><div class="timeline blue"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>时间轴</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-10-03</p></div></div><div class='timeline-item-content'><p>init</p></div></div></div><hr><p>在 Win11 + WSL2 archlinux 的 mirrored 网络模式下，重启后有概率会触发无法 WSL 访问网络但 Windows 可以访问的问题。</p><p><img src="https://cdn.jsdelivr.net/gh/even629/myPicGo/202510031811227.png" alt="环境"></p><h1 id="ping-网关"><a href="#ping-网关" class="headerlink" title="ping 网关"></a>ping 网关</h1><p>先确认能不能 ping 通网关。</p><ul><li>如果能 ping 通 IP 但不能访问域名 → 是 DNS 问题</li><li>连 IP 都 ping 不通 → 是 网络转发 / 网卡 / 防火墙问题</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping -c 4 8.8.8.8</span><br></pre></td></tr></table></figure><h1 id="DNS-问题"><a href="#DNS-问题" class="headerlink" title="DNS 问题"></a>DNS 问题</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> emacs /etc/resolve.conf</span><br><span class="line"><span class="comment"># 写入如下配置</span></span><br><span class="line">nameserver 8.8.8.8</span><br><span class="line">nameserver 1.1.1.1</span><br></pre></td></tr></table></figure><p>为避免每次重启被覆盖，可以关闭自动生成</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> bash -c <span class="string">&quot;echo &#x27;[network]&#x27; &gt; /etc/wsl.conf&quot;</span></span><br><span class="line"><span class="built_in">sudo</span> bash -c <span class="string">&quot;echo &#x27;generateResolvConf = false&#x27; &gt;&gt; /etc/wsl.conf&quot;</span></span><br></pre></td></tr></table></figure><p>重启 WSL</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl <span class="literal">--shutdown</span></span><br></pre></td></tr></table></figure><p>查看网络是否恢复</p><h1 id="防火墙问题"><a href="#防火墙问题" class="headerlink" title="防火墙问题"></a>防火墙问题</h1><p>打开 windows 安全中心的防火墙和网络保护：<br><img src="https://cdn.jsdelivr.net/gh/even629/myPicGo/202510031217361.png" alt="防火墙和网络保护"><br>点击允许应用通过防火墙，将 C:\Windows\System32\wsl.exe 加入。<br>再次查看网络是否恢复。</p>]]></content>
       
       
       <categories>
@@ -134,9 +134,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> 动态规划 </tag>
-            
             <tag> leetcode面试经典150题 </tag>
+            
+            <tag> 动态规划 </tag>
             
             <tag> 贪心 </tag>
             
@@ -165,9 +165,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> 动态规划 </tag>
-            
             <tag> leetcode面试经典150题 </tag>
+            
+            <tag> 动态规划 </tag>
             
             <tag> 贪心 </tag>
             
@@ -227,9 +227,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> 动态规划 </tag>
-            
             <tag> leetcode面试经典150题 </tag>
+            
+            <tag> 动态规划 </tag>
             
         </tags>
       
@@ -397,9 +397,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> 双指针 </tag>
-            
             <tag> leetcode面试经典150题 </tag>
+            
+            <tag> 双指针 </tag>
             
         </tags>
       
@@ -426,9 +426,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode每日一题 </tag>
-            
             <tag> 动态规划 </tag>
+            
+            <tag> leetcode每日一题 </tag>
             
         </tags>
       
@@ -507,9 +507,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> 双指针 </tag>
-            
             <tag> leetcode面试经典150题 </tag>
+            
+            <tag> 双指针 </tag>
             
         </tags>
       
@@ -536,9 +536,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode每日一题 </tag>
-            
             <tag> 排序 </tag>
+            
+            <tag> leetcode每日一题 </tag>
             
         </tags>
       
@@ -646,11 +646,11 @@
             
             <tag> algorithm </tag>
             
-            <tag> 排序 </tag>
+            <tag> leetcode面试经典150题 </tag>
             
             <tag> 双指针 </tag>
             
-            <tag> leetcode面试经典150题 </tag>
+            <tag> 排序 </tag>
             
         </tags>
       
@@ -706,9 +706,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode每日一题 </tag>
-            
             <tag> 双指针 </tag>
+            
+            <tag> leetcode每日一题 </tag>
             
         </tags>
       
@@ -735,9 +735,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode每日一题 </tag>
-            
             <tag> 动态规划 </tag>
+            
+            <tag> leetcode每日一题 </tag>
             
         </tags>
       
@@ -822,9 +822,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode每日一题 </tag>
-            
             <tag> 排序 </tag>
+            
+            <tag> leetcode每日一题 </tag>
             
         </tags>
       
@@ -1091,9 +1091,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode每日一题 </tag>
-            
             <tag> 排序 </tag>
+            
+            <tag> leetcode每日一题 </tag>
             
         </tags>
       
@@ -1172,9 +1172,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode每日一题 </tag>
-            
             <tag> 排序 </tag>
+            
+            <tag> leetcode每日一题 </tag>
             
         </tags>
       
