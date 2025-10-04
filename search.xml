@@ -4,6 +4,64 @@
   
     
     <entry>
+      <title>面试经典150题 P380 O(1) 时间插入、删除和获取随机元素</title>
+      <link href="/posts/380/"/>
+      <url>/posts/380/</url>
+      
+        <content type="html"><![CDATA[<hr><div class="timeline blue"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>时间轴</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-10-04</p></div></div><div class='timeline-item-content'><p>init</p></div></div></div><hr><p>题目：<br><div class="tag link"><a class="link-card" title="P380 O(1) 时间插入、删除和获取随机元素" href="https://leetcode.cn/problems/insert-delete-getrandom-o1/description/?envType=study-plan-v2&envId=top-interview-150"><div class="left"><img src="https://leetcode.cn/favicon.ico"/></div><div class="right"><p class="text">P380 O(1) 时间插入、删除和获取随机元素</p><p class="url">https://leetcode.cn/problems/insert-delete-getrandom-o1/description/?envType=study-plan-v2&envId=top-interview-150</p></div></a></div></p><p>这题我本来以为 getRandom 只要概率相同即可，但是这个题检测时大概率设置了随机数种子，如果不是调用 rand()得出来的顺序必定和答案不同。<br>这题主要用 hashmap 存储 val,index，用 vector 做随机访问插入时直接放入 vector 的最后一位，删除时将被删除的元素与最后一个元素交换位置，然后弹出最后一个元素 pop_back(),要记得更改 hashmap 中因为交换而使得最后一个元素的 Index。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unordered_map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> std::unordered_map;</span><br><span class="line"><span class="keyword">using</span> std::vector;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">RandomizedSet</span> &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">  unordered_map&lt;<span class="type">int</span>, <span class="type">int</span>&gt; umap;</span><br><span class="line">  vector&lt;<span class="type">int</span>&gt; vec;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="built_in">RandomizedSet</span>() &#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="type">bool</span> <span class="title">insert</span><span class="params">(<span class="type">int</span> val)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (umap.<span class="built_in">count</span>(val) == <span class="number">0</span>) &#123;</span><br><span class="line">      vec.<span class="built_in">push_back</span>(val);</span><br><span class="line">      umap[val] = vec.<span class="built_in">size</span>() - <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="type">bool</span> <span class="title">remove</span><span class="params">(<span class="type">int</span> val)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (umap.<span class="built_in">count</span>(val) == <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      umap[vec.<span class="built_in">back</span>()] = umap[val];</span><br><span class="line">      std::<span class="built_in">swap</span>(vec[umap[val]], vec.<span class="built_in">back</span>());</span><br><span class="line"></span><br><span class="line">      vec.<span class="built_in">pop_back</span>();</span><br><span class="line">      umap.<span class="built_in">erase</span>(val);</span><br><span class="line"></span><br><span class="line">      <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="type">int</span> <span class="title">getRandom</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> vec[std::<span class="built_in">rand</span>() % vec.<span class="built_in">size</span>()]; &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> algorithm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> algorithm </tag>
+            
+            <tag> 哈希表 </tag>
+            
+            <tag> leetcode面试经典150题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>leetcode每日一题 P11 盛水最多的容器</title>
+      <link href="/posts/11/"/>
+      <url>/posts/11/</url>
+      
+        <content type="html"><![CDATA[<hr><div class="timeline blue"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>时间轴</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-10-04</p></div></div><div class='timeline-item-content'><p>init</p></div></div></div><hr><p>题目：<br><div class="tag link"><a class="link-card" title="P11 盛水最多的容器" href="https://leetcode.cn/problems/container-with-most-water/description/?envType=daily-question&envId=2025-10-04"><div class="left"><img src="https://leetcode.cn/favicon.ico"/></div><div class="right"><p class="text">P11 盛水最多的容器</p><p class="url">https://leetcode.cn/problems/container-with-most-water/description/?envType=daily-question&envId=2025-10-04</p></div></a></div></p><p>这题是经典的双指针题，但是我最开始的解法并未利用双指针，而是基于这样一个事实：<br>如果某一个端点构成容器的一侧，那么构成容器盛水最多的另一个端点是离它最远的且大于或等于它的高度的端点。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> std::vector;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="function"><span class="type">int</span> <span class="title">maxArea</span><span class="params">(vector&lt;<span class="type">int</span>&gt; &amp;height)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 从height最小的开始，离当前的端点最远且大于等于height的(左右都要寻找)</span></span><br><span class="line">    <span class="type">int</span> n, i, j;</span><br><span class="line">    <span class="type">int</span> max = <span class="number">-1</span>;</span><br><span class="line">    <span class="type">int</span> curr_height;</span><br><span class="line">    n = height.<span class="built_in">size</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">      curr_height = height[i];</span><br><span class="line">      <span class="keyword">for</span> (j = n - <span class="number">1</span>; j &gt; i; j--) &#123;</span><br><span class="line">        <span class="keyword">if</span> (height[j] &gt;= curr_height) &#123;</span><br><span class="line">          max = std::<span class="built_in">max</span>(max, curr_height * (j - i));</span><br><span class="line">          <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; i; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (height[j] &gt;= curr_height) &#123;</span><br><span class="line">          max = std::<span class="built_in">max</span>(max, curr_height * (i-j));</span><br><span class="line">          <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> max;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>上述解法虽然优化了暴力双循环，但最坏时间复杂度还是 O(n^2)还是不如双指针效率高：</p><ul><li>面积由 短板高度 × 宽度 决定。<blockquote><p>如果移动长板，宽度减少但高度不一定增加，所以面积不会变大。所以我们应该 始终移动短板指针，这样才有可能找到更大的面积。</p></blockquote></li></ul><p>时间复杂度 O(n)。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> std::vector;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">maxArea</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; height)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> left = <span class="number">0</span>, right = height.<span class="built_in">size</span>() - <span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> max_area = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (left &lt; right) &#123;</span><br><span class="line">            <span class="type">int</span> h = std::<span class="built_in">min</span>(height[left], height[right]);</span><br><span class="line">            <span class="type">int</span> w = right - left;</span><br><span class="line">            max_area = std::<span class="built_in">max</span>(max_area, h * w);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 移动短板</span></span><br><span class="line">            <span class="keyword">if</span> (height[left] &lt; height[right]) &#123;</span><br><span class="line">                left++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                right--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max_area;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> algorithm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> algorithm </tag>
+            
+            <tag> leetcode每日一题 </tag>
+            
+            <tag> 双指针 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C++</title>
       <link href="/posts/43000/"/>
       <url>/posts/43000/</url>
@@ -646,9 +704,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> 排序 </tag>
-            
             <tag> 双指针 </tag>
+            
+            <tag> 排序 </tag>
             
             <tag> leetcode面试经典150题 </tag>
             
@@ -911,9 +969,9 @@
             
             <tag> leetcode每日一题 </tag>
             
-            <tag> 设计题 </tag>
-            
             <tag> 字符串 </tag>
+            
+            <tag> 设计题 </tag>
             
             <tag> 哈希表 </tag>
             
