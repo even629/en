@@ -4,6 +4,151 @@
   
     
     <entry>
+      <title>面试经典150题 P101 对称二叉树</title>
+      <link href="/posts/101/"/>
+      <url>/posts/101/</url>
+      
+        <content type="html"><![CDATA[<hr><div class="timeline blue"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>时间轴</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-10-23</p></div></div><div class='timeline-item-content'><p>init</p></div></div></div><hr><p>题目：<br><div class="tag link"><a class="link-card" title="P101 对称二叉树" href="https://leetcode.cn/problems/symmetric-tree/description/?envType=study-plan-v2&envId=top-interview-150"><div class="left"><img src="https://leetcode.cn/favicon.ico"/></div><div class="right"><p class="text">P101 对称二叉树</p><p class="url">https://leetcode.cn/problems/symmetric-tree/description/?envType=study-plan-v2&envId=top-interview-150</p></div></a></div></p><p>递归，对称比较</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">TreeNode</span> &#123;</span><br><span class="line"><span class="type">int</span> val;</span><br><span class="line">TreeNode *left;</span><br><span class="line">TreeNode *right;</span><br><span class="line"><span class="built_in">TreeNode</span>()</span><br><span class="line">: <span class="built_in">val</span>(<span class="number">0</span>)</span><br><span class="line">, <span class="built_in">left</span>(<span class="literal">nullptr</span>)</span><br><span class="line">, <span class="built_in">right</span>(<span class="literal">nullptr</span>)</span><br><span class="line">&#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">TreeNode</span>(<span class="type">int</span> x)</span><br><span class="line">: <span class="built_in">val</span>(x)</span><br><span class="line">, <span class="built_in">left</span>(<span class="literal">nullptr</span>)</span><br><span class="line">, <span class="built_in">right</span>(<span class="literal">nullptr</span>)</span><br><span class="line">&#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">TreeNode</span>(<span class="type">int</span> x, TreeNode *left, TreeNode *right)</span><br><span class="line">: <span class="built_in">val</span>(x)</span><br><span class="line">, <span class="built_in">left</span>(left)</span><br><span class="line">, <span class="built_in">right</span>(right)</span><br><span class="line">&#123;</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isSame</span><span class="params">(TreeNode *left, TreeNode *right)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">if</span> (left != <span class="literal">nullptr</span> &amp;&amp; right != <span class="literal">nullptr</span> &amp;&amp;</span><br><span class="line">    right-&gt;val == left-&gt;val) &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="built_in">isSame</span>(left-&gt;right, right-&gt;left) &amp;&amp;</span><br><span class="line">       <span class="built_in">isSame</span>(left-&gt;left, right-&gt;right);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (left == <span class="literal">nullptr</span> &amp;&amp; right == <span class="literal">nullptr</span>) &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isSymmetric</span><span class="params">(TreeNode *root)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">if</span> (root == <span class="literal">nullptr</span>) &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="built_in">isSame</span>(root-&gt;left, root-&gt;right);</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>非递归写法，迭代，把结点入队两次</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> std::queue;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isSymmetric</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">nullptr</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">        queue&lt;TreeNode*&gt; que;</span><br><span class="line">        que.<span class="built_in">push</span>(root-&gt;left);</span><br><span class="line">        que.<span class="built_in">push</span>(root-&gt;right);</span><br><span class="line">        TreeNode *left, *right;</span><br><span class="line">        <span class="keyword">while</span> (!que.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            left = que.<span class="built_in">front</span>(); </span><br><span class="line">            que.<span class="built_in">pop</span>();</span><br><span class="line">            right = que.<span class="built_in">front</span>(); </span><br><span class="line">            que.<span class="built_in">pop</span>();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (left == <span class="literal">nullptr</span> &amp;&amp; right == <span class="literal">nullptr</span>) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">if</span> (left == <span class="literal">nullptr</span> || right == <span class="literal">nullptr</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">if</span> (left-&gt;val != right-&gt;val) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 注意这里的对称入队顺序</span></span><br><span class="line">            que.<span class="built_in">push</span>(left-&gt;left);</span><br><span class="line">            que.<span class="built_in">push</span>(right-&gt;right);</span><br><span class="line">            que.<span class="built_in">push</span>(left-&gt;right);</span><br><span class="line">            que.<span class="built_in">push</span>(right-&gt;left);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> algorithm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> algorithm </tag>
+            
+            <tag> leetcode面试经典150题 </tag>
+            
+            <tag> 二叉树 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>面试经典150题 P226 翻转二叉树</title>
+      <link href="/posts/226/"/>
+      <url>/posts/226/</url>
+      
+        <content type="html"><![CDATA[<hr><div class="timeline blue"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>时间轴</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-10-23</p></div></div><div class='timeline-item-content'><p>init</p></div></div></div><hr><p>题目：<br><div class="tag link"><a class="link-card" title="P226 翻转二叉树" href="https://leetcode.cn/problems/invert-binary-tree/description/?envType=study-plan-v2&envId=top-interview-150"><div class="left"><img src="https://leetcode.cn/favicon.ico"/></div><div class="right"><p class="text">P226 翻转二叉树</p><p class="url">https://leetcode.cn/problems/invert-binary-tree/description/?envType=study-plan-v2&envId=top-interview-150</p></div></a></div></p><p>先序遍历</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line"><span class="function">TreeNode *<span class="title">invertTree</span><span class="params">(TreeNode *root)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">if</span> (root == <span class="literal">nullptr</span>) &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">nullptr</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (root-&gt;left == <span class="literal">nullptr</span> &amp;&amp; root-&gt;right == <span class="literal">nullptr</span>) &#123;</span><br><span class="line"><span class="keyword">return</span> root;</span><br><span class="line">&#125;</span><br><span class="line">std::<span class="built_in">swap</span>(root-&gt;left, root-&gt;right);</span><br><span class="line"><span class="built_in">invertTree</span>(root-&gt;left);</span><br><span class="line"><span class="built_in">invertTree</span>(root-&gt;right);</span><br><span class="line"><span class="keyword">return</span> root;</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> algorithm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> algorithm </tag>
+            
+            <tag> leetcode面试经典150题 </tag>
+            
+            <tag> 二叉树 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>面试经典150题 P100 相同的树</title>
+      <link href="/posts/100/"/>
+      <url>/posts/100/</url>
+      
+        <content type="html"><![CDATA[<hr><div class="timeline blue"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>时间轴</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-10-23</p></div></div><div class='timeline-item-content'><p>init</p></div></div></div><hr><p>题目：<br><div class="tag link"><a class="link-card" title="P100 相同的树" href="https://leetcode.cn/problems/same-tree/description/?envType=study-plan-v2&envId=top-interview-150"><div class="left"><img src="https://leetcode.cn/favicon.ico"/></div><div class="right"><p class="text">P100 相同的树</p><p class="url">https://leetcode.cn/problems/same-tree/description/?envType=study-plan-v2&envId=top-interview-150</p></div></a></div></p><p>递归遍历，先序遍历，如果两个树相同，那么它们根节点一定相同并且它们的左子树相同，右子树也相同。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode() : val(0), left(nullptr), right(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">TreeNode</span> &#123;</span><br><span class="line"><span class="type">int</span> val;</span><br><span class="line">TreeNode *left;</span><br><span class="line">TreeNode *right;</span><br><span class="line"><span class="built_in">TreeNode</span>()</span><br><span class="line">: <span class="built_in">val</span>(<span class="number">0</span>)</span><br><span class="line">, <span class="built_in">left</span>(<span class="literal">nullptr</span>)</span><br><span class="line">, <span class="built_in">right</span>(<span class="literal">nullptr</span>)</span><br><span class="line">&#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">TreeNode</span>(<span class="type">int</span> x)</span><br><span class="line">: <span class="built_in">val</span>(x)</span><br><span class="line">, <span class="built_in">left</span>(<span class="literal">nullptr</span>)</span><br><span class="line">, <span class="built_in">right</span>(<span class="literal">nullptr</span>)</span><br><span class="line">&#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">TreeNode</span>(<span class="type">int</span> x, TreeNode *left, TreeNode *right)</span><br><span class="line">: <span class="built_in">val</span>(x)</span><br><span class="line">, <span class="built_in">left</span>(left)</span><br><span class="line">, <span class="built_in">right</span>(right)</span><br><span class="line">&#123;</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isSameTree</span><span class="params">(TreeNode *p, TreeNode *q)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">if</span> (p == <span class="literal">nullptr</span> &amp;&amp; q == <span class="literal">nullptr</span>) &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (p != <span class="literal">nullptr</span> &amp;&amp; q != <span class="literal">nullptr</span>) &#123;</span><br><span class="line"><span class="keyword">if</span> (p-&gt;val != q-&gt;val) &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="built_in">isSameTree</span>(p-&gt;left, q-&gt;left) &amp;&amp;</span><br><span class="line">       <span class="built_in">isSameTree</span>(p-&gt;right, q-&gt;right);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// p or q is nullptr</span></span><br><span class="line"><span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>rust 可以一句话结束，因为 TreeNode 实现了 PartialEq, Eq, 🤣🤣🤣</p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Definition for a binary tree node.</span></span><br><span class="line"><span class="meta">#[derive(Debug, PartialEq, Eq)]</span></span><br><span class="line"><span class="keyword">pub</span> <span class="keyword">struct</span> <span class="title class_">TreeNode</span> &#123;</span><br><span class="line">    <span class="keyword">pub</span> val: <span class="type">i32</span>,</span><br><span class="line">    <span class="keyword">pub</span> left: <span class="type">Option</span>&lt;Rc&lt;RefCell&lt;TreeNode&gt;&gt;&gt;,</span><br><span class="line">    <span class="keyword">pub</span> right: <span class="type">Option</span>&lt;Rc&lt;RefCell&lt;TreeNode&gt;&gt;&gt;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">TreeNode</span> &#123;</span><br><span class="line">    <span class="meta">#[inline]</span></span><br><span class="line">    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">new</span>(val: <span class="type">i32</span>) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> &#123;</span><br><span class="line">        TreeNode &#123;</span><br><span class="line">            val,</span><br><span class="line">            left: <span class="literal">None</span>,</span><br><span class="line">            right: <span class="literal">None</span>,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">use</span> std::cell::RefCell;</span><br><span class="line"><span class="keyword">use</span> std::rc::Rc;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Solution</span>;</span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">is_same_tree</span>(</span><br><span class="line">        p: <span class="type">Option</span>&lt;Rc&lt;RefCell&lt;TreeNode&gt;&gt;&gt;,</span><br><span class="line">        q: <span class="type">Option</span>&lt;Rc&lt;RefCell&lt;TreeNode&gt;&gt;&gt;,</span><br><span class="line">    ) <span class="punctuation">-&gt;</span> <span class="type">bool</span> &#123;</span><br><span class="line">        p == q</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> algorithm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> algorithm </tag>
+            
+            <tag> leetcode面试经典150题 </tag>
+            
+            <tag> 二叉树 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>面试经典150题 P104 二叉树的最大深度</title>
+      <link href="/posts/104/"/>
+      <url>/posts/104/</url>
+      
+        <content type="html"><![CDATA[<hr><div class="timeline blue"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>时间轴</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-10-23</p></div></div><div class='timeline-item-content'><p>init</p></div></div></div><hr><p>题目：<br><div class="tag link"><a class="link-card" title="P104 二叉树的最大深度" href="https://leetcode.cn/problems/maximum-depth-of-binary-tree/description/?envType=study-plan-v2&envId=top-interview-150"><div class="left"><img src="https://leetcode.cn/favicon.ico"/></div><div class="right"><p class="text">P104 二叉树的最大深度</p><p class="url">https://leetcode.cn/problems/maximum-depth-of-binary-tree/description/?envType=study-plan-v2&envId=top-interview-150</p></div></a></div></p><h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><p>一颗二叉树的最大深度等于它左子树的最大深度和右子树最大深度的最大值+1。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode() : val(0), left(nullptr), right(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">maxDepth</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root==<span class="literal">NULL</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(root-&gt;left==<span class="literal">NULL</span> &amp;&amp; root-&gt;right==<span class="literal">NULL</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> std::<span class="built_in">max</span>(<span class="built_in">maxDepth</span>(root-&gt;left)<span class="number">+1</span>, <span class="built_in">maxDepth</span>(root-&gt;right)<span class="number">+1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p><h1 id="层次遍历"><a href="#层次遍历" class="headerlink" title="层次遍历"></a>层次遍历</h1><p>层次遍历每次记住每层的个数</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">TreeNode</span> &#123;</span><br><span class="line"><span class="type">int</span> val;</span><br><span class="line">TreeNode *left;</span><br><span class="line">TreeNode *right;</span><br><span class="line"><span class="built_in">TreeNode</span>()</span><br><span class="line">: <span class="built_in">val</span>(<span class="number">0</span>)</span><br><span class="line">, <span class="built_in">left</span>(<span class="literal">nullptr</span>)</span><br><span class="line">, <span class="built_in">right</span>(<span class="literal">nullptr</span>)</span><br><span class="line">&#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">TreeNode</span>(<span class="type">int</span> x)</span><br><span class="line">: <span class="built_in">val</span>(x)</span><br><span class="line">, <span class="built_in">left</span>(<span class="literal">nullptr</span>)</span><br><span class="line">, <span class="built_in">right</span>(<span class="literal">nullptr</span>)</span><br><span class="line">&#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">TreeNode</span>(<span class="type">int</span> x, TreeNode *left, TreeNode *right)</span><br><span class="line">: <span class="built_in">val</span>(x)</span><br><span class="line">, <span class="built_in">left</span>(left)</span><br><span class="line">, <span class="built_in">right</span>(right)</span><br><span class="line">&#123;</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">maxDepth</span><span class="params">(TreeNode *root)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">if</span> (root == <span class="literal">NULL</span>) &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 层次遍历求最大深度</span></span><br><span class="line"><span class="type">int</span> depth = <span class="number">1</span>;</span><br><span class="line">std::queue&lt;TreeNode *&gt; que;</span><br><span class="line"></span><br><span class="line">TreeNode *tmp;</span><br><span class="line"><span class="type">int</span> i, qsize;</span><br><span class="line">que.<span class="built_in">push</span>(root);</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> (!que.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">qsize = que.<span class="built_in">size</span>();</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; qsize; i++) &#123;</span><br><span class="line">tmp = que.<span class="built_in">front</span>();</span><br><span class="line">que.<span class="built_in">pop</span>();</span><br><span class="line"><span class="keyword">if</span> (tmp-&gt;left != <span class="literal">NULL</span>) &#123;</span><br><span class="line">que.<span class="built_in">push</span>(tmp-&gt;left);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (tmp-&gt;right != <span class="literal">NULL</span>) &#123;</span><br><span class="line">que.<span class="built_in">push</span>(tmp-&gt;right);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">depth++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> depth;</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>rust实现<br><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> std::cell::RefCell;</span><br><span class="line"><span class="keyword">use</span> std::rc::Rc;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Definition for a binary tree node.</span></span><br><span class="line"><span class="meta">#[derive(Debug, PartialEq, Eq)]</span></span><br><span class="line"><span class="keyword">pub</span> <span class="keyword">struct</span> <span class="title class_">TreeNode</span> &#123;</span><br><span class="line">    <span class="keyword">pub</span> val: <span class="type">i32</span>,</span><br><span class="line">    <span class="keyword">pub</span> left: <span class="type">Option</span>&lt;Rc&lt;RefCell&lt;TreeNode&gt;&gt;&gt;,</span><br><span class="line">    <span class="keyword">pub</span> right: <span class="type">Option</span>&lt;Rc&lt;RefCell&lt;TreeNode&gt;&gt;&gt;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">TreeNode</span> &#123;</span><br><span class="line">    <span class="meta">#[inline]</span></span><br><span class="line">    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">new</span>(val: <span class="type">i32</span>) <span class="punctuation">-&gt;</span> <span class="keyword">Self</span> &#123;</span><br><span class="line">        TreeNode &#123;</span><br><span class="line">            val,</span><br><span class="line">            left: <span class="literal">None</span>,</span><br><span class="line">            right: <span class="literal">None</span>,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Solution</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> std::collections::VecDeque;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">max_depth</span>(root: <span class="type">Option</span>&lt;Rc&lt;RefCell&lt;TreeNode&gt;&gt;&gt;) <span class="punctuation">-&gt;</span> <span class="type">i32</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">depth</span> = <span class="number">0_i32</span>;</span><br><span class="line">        <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">length</span> = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">que</span> = VecDeque::<span class="title function_ invoke__">new</span>();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">let</span> <span class="variable">Some</span>(root) = root &#123;</span><br><span class="line">            que.<span class="title function_ invoke__">push_back</span>(root);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> !que.<span class="title function_ invoke__">is_empty</span>() &#123;</span><br><span class="line">            length = que.<span class="title function_ invoke__">len</span>();</span><br><span class="line">            <span class="keyword">for</span> <span class="variable">_</span> <span class="keyword">in</span> <span class="number">0</span>..length &#123;</span><br><span class="line">                <span class="keyword">if</span> <span class="keyword">let</span> <span class="variable">Some</span>(node) = que.<span class="title function_ invoke__">front</span>() &#123;</span><br><span class="line">                    <span class="keyword">let</span> <span class="variable">node</span> = Rc::<span class="title function_ invoke__">clone</span>(node); </span><br><span class="line">                    <span class="keyword">let</span> <span class="variable">node_ref</span> = node.<span class="title function_ invoke__">borrow</span>();</span><br><span class="line"></span><br><span class="line">                    <span class="comment">// 先处理再 pop_front</span></span><br><span class="line">                    <span class="keyword">if</span> <span class="keyword">let</span> <span class="variable">Some</span>(left) = &amp;node_ref.left &#123;</span><br><span class="line">                        que.<span class="title function_ invoke__">push_back</span>(Rc::<span class="title function_ invoke__">clone</span>(left));</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span> <span class="keyword">let</span> <span class="variable">Some</span>(right) = &amp;node_ref.right &#123;</span><br><span class="line">                        que.<span class="title function_ invoke__">push_back</span>(Rc::<span class="title function_ invoke__">clone</span>(right));</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    </span><br><span class="line">                    que.<span class="title function_ invoke__">pop_front</span>();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            depth += <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        depth</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">main</span>() &#123;&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> algorithm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> algorithm </tag>
+            
+            <tag> leetcode面试经典150题 </tag>
+            
+            <tag> 二叉树 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>leetcode每日一题 P3461 判断操作后字符串中的数字是否相等 I</title>
+      <link href="/posts/3461/"/>
+      <url>/posts/3461/</url>
+      
+        <content type="html"><![CDATA[<hr><div class="timeline blue"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>时间轴</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-10-23</p></div></div><div class='timeline-item-content'><p>init</p></div></div></div><hr><p>题目：<br><div class="tag link"><a class="link-card" title="P3461 判断操作后字符串中的数字是否相等 I" href="https://leetcode.cn/problems/check-if-digits-are-equal-in-string-after-operations-i/description/?envType=daily-question&envId=2025-10-23"><div class="left"><img src="https://leetcode.cn/favicon.ico"/></div><div class="right"><p class="text">P3461 判断操作后字符串中的数字是否相等 I</p><p class="url">https://leetcode.cn/problems/check-if-digits-are-equal-in-string-after-operations-i/description/?envType=daily-question&envId=2025-10-23</p></div></a></div></p><p>这个就是杨辉三角，这里我们直接模拟即可。用队列来实现，注意要区分第一个和最后一个，因为这两个数在加法并取余中只用到了一次。因此我们用-1 做为标识。表示-1 前面这个数字为最后一个数。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> std::string;</span><br><span class="line"><span class="keyword">using</span> std::queue;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">hasSameDigits</span><span class="params">(string s)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">queue&lt;<span class="type">int</span>&gt; que;</span><br><span class="line"><span class="type">int</span> val1, val2;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">char</span> ch : s) &#123;</span><br><span class="line">que.<span class="built_in">push</span>(ch - <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line">que.<span class="built_in">push</span>(<span class="number">-1</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> (que.<span class="built_in">size</span>() &gt; <span class="number">3</span>) &#123;</span><br><span class="line">val1 = que.<span class="built_in">front</span>();</span><br><span class="line">que.<span class="built_in">pop</span>();</span><br><span class="line"></span><br><span class="line">val2 = que.<span class="built_in">front</span>();</span><br><span class="line"><span class="keyword">if</span> (val2 == <span class="number">-1</span>) &#123;</span><br><span class="line">que.<span class="built_in">pop</span>();</span><br><span class="line">que.<span class="built_in">push</span>(<span class="number">-1</span>);</span><br><span class="line"><span class="keyword">continue</span>;</span><br><span class="line">&#125;</span><br><span class="line">que.<span class="built_in">push</span>((val1 + val2) % <span class="number">10</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (que.<span class="built_in">size</span>() == <span class="number">3</span>) &#123;</span><br><span class="line">val1 = que.<span class="built_in">front</span>();</span><br><span class="line">que.<span class="built_in">pop</span>();</span><br><span class="line">val2 = que.<span class="built_in">front</span>();</span><br><span class="line"><span class="keyword">if</span> (val1 == val2) &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> algorithm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> algorithm </tag>
+            
+            <tag> leetcode每日一题 </tag>
+            
+            <tag> 模拟 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>rust language advanced</title>
       <link href="/posts/42972/"/>
       <url>/posts/42972/</url>
@@ -21,6 +166,64 @@
         <tags>
             
             <tag> programming </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>leetcode每日一题 P3347 执行操作后元素的最高频率 II</title>
+      <link href="/posts/3347/"/>
+      <url>/posts/3347/</url>
+      
+        <content type="html"><![CDATA[<hr><div class="timeline blue"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>时间轴</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-10-22</p></div></div><div class='timeline-item-content'><p>init</p></div></div></div><hr><p>题目：<br><div class="tag link"><a class="link-card" title="P3347 执行操作后元素的最高频率 I" href="https://leetcode.cn/problems/maximum-frequency-of-an-element-after-performing-operations-ii/description/?envType=daily-question&envId=2025-10-22"><div class="left"><img src="https://leetcode.cn/favicon.ico"/></div><div class="right"><p class="text">P3347 执行操作后元素的最高频率 I</p><p class="url">https://leetcode.cn/problems/maximum-frequency-of-an-element-after-performing-operations-ii/description/?envType=daily-question&envId=2025-10-22</p></div></a></div></p><p>对于一个值 nums[i]，我们要找 nums[i]中值处于[nums[i]-k,nums[i]+k]之间的值，这样的值通过一次 operation 就能变成目标众数。但是仅仅考虑 nums[i]是不正确的，因为 nums[i]也可以通过一次 operation 变成[nums[i]-k,nums[i]+k]之间的任何一个值作为目标众数。<br>那么我们还要将 num[i]待选目标众数通过一次 operation 得到的所有值都作为目标众数枚举一遍吗？答案是否定的。</p><h2 id="核心概念"><a href="#核心概念" class="headerlink" title="核心概念"></a>核心概念</h2><ul><li>排序数组 <code>nums</code></li><li>每个元素的可操作区间：<code>[nums[i]-k, nums[i]+k]</code></li><li>枚举目标众数 val → 计算能变成 val 的元素数量</li></ul><p>定义窗口 <code>[val-k, val+k]</code>：</p><ul><li>左边界 l：窗口包含的最左元素</li><li>右边界 r：窗口包含的最右元素</li><li><code>range_size = r - l + 1</code></li></ul><p>最大频率：</p><script type="math/tex; mode=display">f_i = \min(\text{range\_size}, \text{numOperations} + \text{count}[val])</script><h2 id="关键观察"><a href="#关键观察" class="headerlink" title="关键观察"></a>关键观察</h2><blockquote><p>只有当窗口的左右边界 l 或 r 发生变化时，<code>range_size</code> 才会变化 → f_i 才可能变大</p></blockquote><ul><li>假设 val ∈ <code>[nums[r]-k, nums[r+1]-k)</code>：<ul><li>r 不变</li><li>l 不变</li><li>range_size 恒定 → f_i 不变</li></ul></li><li>区间内部的所有 val <strong>不会增加最大频率</strong> → 无需枚举</li></ul><h2 id="临界点分析"><a href="#临界点分析" class="headerlink" title="临界点分析"></a>临界点分析</h2><p>窗口边界变化的临界点：</p><ol><li>左边界 l 变化：val - k = nums[i]（左边元素刚好进入/离开窗口）</li><li>右边界 r 变化：val + k = nums[i]（右边元素刚好进入/离开窗口）</li></ol><p>也就是说，<strong>只有当 val 等于某个 nums[i] ± k 或 nums[i] 本身</strong>，窗口边界会发生变化。</p><ul><li>val = nums[i] → 对应窗口覆盖 nums[i] 本身</li><li>val = nums[i] - k → 窗口左边界刚好覆盖 nums[i]</li><li>val = nums[i] + k → 窗口右边界刚好覆盖 nums[i]</li></ul><blockquote><p>这三个值就是 <strong>所有可能改变窗口范围的临界点</strong></p></blockquote><p>综上：我们只需要枚举边界值即可，即枚举{nums[i]-k , nums[i], num[i] +k}。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unordered_map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> std::vector;</span><br><span class="line"><span class="keyword">using</span> std::unordered_map;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">maxFrequency</span><span class="params">(vector&lt;<span class="type">int</span>&gt; &amp;nums, <span class="type">int</span> k, <span class="type">int</span> numOperations)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="type">int</span> n = nums.<span class="built_in">size</span>();</span><br><span class="line"><span class="type">int</span> i;</span><br><span class="line"><span class="type">int</span> range_size;</span><br><span class="line"><span class="type">int</span> res = <span class="number">0</span>;</span><br><span class="line">unordered_map&lt;<span class="type">int</span>, <span class="type">int</span>&gt; umap;</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">umap[nums[i]]++;</span><br><span class="line">&#125;</span><br><span class="line">std::<span class="built_in">sort</span>(nums.<span class="built_in">begin</span>(), nums.<span class="built_in">end</span>());</span><br><span class="line"></span><br><span class="line">n = nums.<span class="built_in">size</span>();</span><br><span class="line"><span class="comment">// 0 &lt;= numOperations &lt;= nums.length</span></span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> val : &#123; nums[i] - k, nums[i], nums[i] + k &#125;) &#123;</span><br><span class="line"><span class="comment">// 要枚举的值不在范围内</span></span><br><span class="line"><span class="keyword">if</span> (val &lt; nums.<span class="built_in">front</span>() || val &gt; nums.<span class="built_in">back</span>()) &#123;</span><br><span class="line"><span class="comment">// 如果val比nums最小值还小，没有意义，因为任何一个值能通过操作变成这个val，那么肯定也可以变成nums的最小值，那么为什么不用最小值作为目标众数呢？</span></span><br><span class="line"><span class="keyword">continue</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// range &#123;x in nums[i] &amp;&amp; x in &#123;val-k..val+k&#125;&#125;</span></span><br><span class="line">range_size =</span><br><span class="line">std::<span class="built_in">upper_bound</span>(nums.<span class="built_in">begin</span>(),</span><br><span class="line"> nums.<span class="built_in">end</span>(), val + k) -</span><br><span class="line">std::<span class="built_in">lower_bound</span>(nums.<span class="built_in">begin</span>(),</span><br><span class="line"> nums.<span class="built_in">end</span>(), val - k);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 最终能把某个值变成出现次数最多的频率 = 原来这个值的出现次数 +</span></span><br><span class="line"><span class="comment">// 通过操作可以变成这个值的次数,但不能超过窗口内可转换到的数量</span></span><br><span class="line">res = std::<span class="built_in">max</span>(</span><br><span class="line">res, std::<span class="built_in">min</span>(numOperations + umap[val],</span><br><span class="line">      range_size));</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; nums = &#123; <span class="number">999999997</span>, <span class="number">999999999</span>, <span class="number">999999999</span> &#125;;</span><br><span class="line">Solution S;</span><br><span class="line"><span class="type">int</span> k = <span class="number">999999999</span>;</span><br><span class="line"><span class="type">int</span> numOperations = <span class="number">2</span>;</span><br><span class="line">S.<span class="built_in">maxFrequency</span>(nums, k, numOperations);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> algorithm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> algorithm </tag>
+            
+            <tag> leetcode每日一题 </tag>
+            
+            <tag> 枚举 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>leetcode每日一题 P3346 执行操作后元素的最高频率 I</title>
+      <link href="/posts/3346/"/>
+      <url>/posts/3346/</url>
+      
+        <content type="html"><![CDATA[<hr><div class="timeline blue"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>时间轴</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2025-10-21</p></div></div><div class='timeline-item-content'><p>init</p></div></div></div><hr><p>题目：<br><div class="tag link"><a class="link-card" title="P3346 执行操作后元素的最高频率 I" href="https://leetcode.cn/problems/maximum-frequency-of-an-element-after-performing-operations-i/description/?envType=daily-question&envId=2025-10-21"><div class="left"><img src="https://leetcode.cn/favicon.ico"/></div><div class="right"><p class="text">P3346 执行操作后元素的最高频率 I</p><p class="url">https://leetcode.cn/problems/maximum-frequency-of-an-element-after-performing-operations-i/description/?envType=daily-question&envId=2025-10-21</p></div></a></div></p><h1 id="WA"><a href="#WA" class="headerlink" title="WA"></a>WA</h1><p>先看 WA 的代码：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unordered_map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> std::vector;</span><br><span class="line"><span class="keyword">using</span> std::unordered_map;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">maxFrequency</span><span class="params">(vector&lt;<span class="type">int</span>&gt; &amp;nums, <span class="type">int</span> k, <span class="type">int</span> numOperations)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="type">int</span> n = nums.<span class="built_in">size</span>();</span><br><span class="line"><span class="type">int</span> i;</span><br><span class="line"><span class="type">int</span> left_bound, right_bound;</span><br><span class="line"><span class="type">int</span> max_val;</span><br><span class="line"><span class="type">int</span> res = <span class="number">0</span>;</span><br><span class="line">unordered_map&lt;<span class="type">int</span>, <span class="type">int</span>&gt; umap;</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">umap[nums[i]]++;</span><br><span class="line">&#125;</span><br><span class="line">std::<span class="built_in">sort</span>(nums.<span class="built_in">begin</span>(), nums.<span class="built_in">end</span>());</span><br><span class="line">nums.<span class="built_in">erase</span>(std::<span class="built_in">unique</span>(nums.<span class="built_in">begin</span>(), nums.<span class="built_in">end</span>()), nums.<span class="built_in">end</span>());</span><br><span class="line">n = nums.<span class="built_in">size</span>();</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">max_val = <span class="number">0</span>;</span><br><span class="line">left_bound = i - <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span> (left_bound &gt;= <span class="number">0</span> &amp;&amp;</span><br><span class="line">       nums[left_bound] &gt;= nums[i] - k) &#123;</span><br><span class="line">max_val += umap[left_bound];</span><br><span class="line">left_bound--;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">right_bound = i + <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span> (right_bound &lt; n &amp;&amp;</span><br><span class="line">       nums[right_bound] &lt;= nums[i] + k) &#123;</span><br><span class="line">max_val += umap[right_bound];</span><br><span class="line">right_bound++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (max_val &lt;= numOperations) &#123;</span><br><span class="line">res = std::<span class="built_in">max</span>(res, max_val + umap[nums[i]]);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">res = std::<span class="built_in">max</span>(res,</span><br><span class="line">       numOperations + umap[nums[i]]);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>对于输入</p><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">nums</span> = [<span class="number">5</span>,<span class="number">64</span>]</span><br><span class="line"><span class="attr">k</span> = <span class="number">42</span></span><br><span class="line"><span class="attr">numOperations</span> = <span class="number">2</span></span><br></pre></td></tr></table></figure><p>上面的代码是 WA 的，因为上面的代码只把最终频率最大的众数，我们称为目标众数的枚举范围只限定在 nums 中的值了。实际上，对于每个数都可以进行一次 operation，两个数如果都进行一次 operation 后相等也是符合要求的。</p><h1 id="AC"><a href="#AC" class="headerlink" title="AC"></a>AC</h1><p>上面 WA 的原因主要是我们没有枚举完整，对于一个值 nums[i]，我们要找 nums[i]中值处于[nums[i]-k,nums[i]+k]之间的值，这样的值通过一次 operation 就能变成目标众数。但是仅仅考虑 nums[i]是不正确的，因为 nums[i]也可以通过一次 operation 变成[nums[i]-k,nums[i]+k]之间的任何一个值作为目标众数。<br>那么我们还要将 num[i]待选目标众数通过一次 operation 得到的所有值都作为目标众数枚举一遍吗？答案是否定的。</p><h2 id="核心概念"><a href="#核心概念" class="headerlink" title="核心概念"></a>核心概念</h2><ul><li>排序数组 <code>nums</code></li><li>每个元素的可操作区间：<code>[nums[i]-k, nums[i]+k]</code></li><li>枚举目标众数 val → 计算能变成 val 的元素数量</li></ul><p>定义窗口 <code>[val-k, val+k]</code>：</p><ul><li>左边界 l：窗口包含的最左元素</li><li>右边界 r：窗口包含的最右元素</li><li><code>range_size = r - l + 1</code></li></ul><p>最大频率：</p><script type="math/tex; mode=display">f_i = \min(\text{range\_size}, \text{numOperations} + \text{count}[val])</script><h2 id="关键观察"><a href="#关键观察" class="headerlink" title="关键观察"></a>关键观察</h2><blockquote><p>只有当窗口的左右边界 l 或 r 发生变化时，<code>range_size</code> 才会变化 → f_i 才可能变大</p></blockquote><ul><li>假设 val ∈ <code>[nums[r]-k, nums[r+1]-k)</code>：<ul><li>r 不变</li><li>l 不变</li><li>range_size 恒定 → f_i 不变</li></ul></li><li>区间内部的所有 val <strong>不会增加最大频率</strong> → 无需枚举</li></ul><h2 id="临界点分析"><a href="#临界点分析" class="headerlink" title="临界点分析"></a>临界点分析</h2><p>窗口边界变化的临界点：</p><ol><li>左边界 l 变化：val - k = nums[i]（左边元素刚好进入/离开窗口）</li><li>右边界 r 变化：val + k = nums[i]（右边元素刚好进入/离开窗口）</li></ol><p>也就是说，<strong>只有当 val 等于某个 nums[i] ± k 或 nums[i] 本身</strong>，窗口边界会发生变化。</p><ul><li>val = nums[i] → 对应窗口覆盖 nums[i] 本身</li><li>val = nums[i] - k → 窗口左边界刚好覆盖 nums[i]</li><li>val = nums[i] + k → 窗口右边界刚好覆盖 nums[i]</li></ul><blockquote><p>这三个值就是 <strong>所有可能改变窗口范围的临界点</strong></p></blockquote><p>综上：我们只需要枚举边界值即可，即枚举{nums[i]-k , nums[i], num[i] +k}。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unordered_map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> std::vector;</span><br><span class="line"><span class="keyword">using</span> std::unordered_map;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">maxFrequency</span><span class="params">(vector&lt;<span class="type">int</span>&gt; &amp;nums, <span class="type">int</span> k, <span class="type">int</span> numOperations)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="type">int</span> n = nums.<span class="built_in">size</span>();</span><br><span class="line"><span class="type">int</span> i;</span><br><span class="line"><span class="type">int</span> range_size;</span><br><span class="line"><span class="type">int</span> res = <span class="number">0</span>;</span><br><span class="line">unordered_map&lt;<span class="type">int</span>, <span class="type">int</span>&gt; umap;</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">umap[nums[i]]++;</span><br><span class="line">&#125;</span><br><span class="line">std::<span class="built_in">sort</span>(nums.<span class="built_in">begin</span>(), nums.<span class="built_in">end</span>());</span><br><span class="line"></span><br><span class="line">n = nums.<span class="built_in">size</span>();</span><br><span class="line"><span class="comment">// 0 &lt;= numOperations &lt;= nums.length</span></span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> val : &#123; nums[i] - k, nums[i], nums[i] + k &#125;) &#123;</span><br><span class="line"><span class="comment">// 要枚举的值不在范围内</span></span><br><span class="line"><span class="keyword">if</span> (val &lt; nums.<span class="built_in">front</span>() || val &gt; nums.<span class="built_in">back</span>()) &#123;</span><br><span class="line"><span class="comment">// 如果val比nums最小值还小，没有意义，因为任何一个值能通过操作变成这个val，那么肯定也可以变成nums的最小值，那么为什么不用最小值作为目标众数呢？</span></span><br><span class="line"><span class="keyword">continue</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// range &#123;x in nums[i] &amp;&amp; x in &#123;val-k..val+k&#125;&#125;</span></span><br><span class="line">range_size =</span><br><span class="line">std::<span class="built_in">upper_bound</span>(nums.<span class="built_in">begin</span>(),</span><br><span class="line"> nums.<span class="built_in">end</span>(), val + k) -</span><br><span class="line">std::<span class="built_in">lower_bound</span>(nums.<span class="built_in">begin</span>(),</span><br><span class="line"> nums.<span class="built_in">end</span>(), val - k);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 最终能把某个值变成出现次数最多的频率 = 原来这个值的出现次数 +</span></span><br><span class="line"><span class="comment">// 通过操作可以变成这个值的次数,但不能超过窗口内可转换到的数量</span></span><br><span class="line">res = std::<span class="built_in">max</span>(</span><br><span class="line">res, std::<span class="built_in">min</span>(numOperations + umap[val],</span><br><span class="line">      range_size));</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; nums = &#123; <span class="number">999999997</span>, <span class="number">999999999</span>, <span class="number">999999999</span> &#125;;</span><br><span class="line">Solution S;</span><br><span class="line"><span class="type">int</span> k = <span class="number">999999999</span>;</span><br><span class="line"><span class="type">int</span> numOperations = <span class="number">2</span>;</span><br><span class="line">S.<span class="built_in">maxFrequency</span>(nums, k, numOperations);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> algorithm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> algorithm </tag>
+            
+            <tag> leetcode每日一题 </tag>
+            
+            <tag> 枚举 </tag>
             
         </tags>
       
@@ -47,9 +250,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> 贪心 </tag>
-            
             <tag> leetcode面试经典150题 </tag>
+            
+            <tag> 贪心 </tag>
             
         </tags>
       
@@ -76,9 +279,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode每日一题 </tag>
-            
             <tag> 字符串 </tag>
+            
+            <tag> leetcode每日一题 </tag>
             
         </tags>
       
@@ -134,9 +337,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode每日一题 </tag>
-            
             <tag> 贪心 </tag>
+            
+            <tag> leetcode每日一题 </tag>
             
         </tags>
       
@@ -188,11 +391,11 @@
             
             <tag> algorithm </tag>
             
+            <tag> 数组 </tag>
+            
             <tag> leetcode每日一题 </tag>
             
             <tag> 数学 </tag>
-            
-            <tag> 数组 </tag>
             
         </tags>
       
@@ -219,11 +422,11 @@
             
             <tag> algorithm </tag>
             
+            <tag> leetcode面试经典150题 </tag>
+            
             <tag> 动态规划 </tag>
             
             <tag> 双指针 </tag>
-            
-            <tag> leetcode面试经典150题 </tag>
             
         </tags>
       
@@ -250,9 +453,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode每日一题 </tag>
-            
             <tag> 数组 </tag>
+            
+            <tag> leetcode每日一题 </tag>
             
         </tags>
       
@@ -354,9 +557,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> 字符串 </tag>
-            
             <tag> leetcode面试经典150题 </tag>
+            
+            <tag> 字符串 </tag>
             
         </tags>
       
@@ -383,9 +586,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode每日一题 </tag>
-            
             <tag> 数组 </tag>
+            
+            <tag> leetcode每日一题 </tag>
             
         </tags>
       
@@ -412,9 +615,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode每日一题 </tag>
-            
             <tag> 动态规划 </tag>
+            
+            <tag> leetcode每日一题 </tag>
             
         </tags>
       
@@ -441,9 +644,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> 字符串 </tag>
-            
             <tag> leetcode面试经典150题 </tag>
+            
+            <tag> 字符串 </tag>
             
         </tags>
       
@@ -470,9 +673,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode每日一题 </tag>
-            
             <tag> 动态规划 </tag>
+            
+            <tag> leetcode每日一题 </tag>
             
             <tag> 滑动窗口 </tag>
             
@@ -501,11 +704,11 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode每日一题 </tag>
+            <tag> 数组 </tag>
             
             <tag> 动态规划 </tag>
             
-            <tag> 数组 </tag>
+            <tag> leetcode每日一题 </tag>
             
         </tags>
       
@@ -586,9 +789,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> 贪心 </tag>
-            
             <tag> leetcode面试经典150题 </tag>
+            
+            <tag> 贪心 </tag>
             
         </tags>
       
@@ -675,9 +878,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> 哈希表 </tag>
-            
             <tag> leetcode面试经典150题 </tag>
+            
+            <tag> 哈希表 </tag>
             
         </tags>
       
@@ -704,9 +907,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode每日一题 </tag>
-            
             <tag> 双指针 </tag>
+            
+            <tag> leetcode每日一题 </tag>
             
         </tags>
       
@@ -789,9 +992,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> 排序 </tag>
-            
             <tag> leetcode面试经典150题 </tag>
+            
+            <tag> 排序 </tag>
             
         </tags>
       
@@ -845,11 +1048,11 @@
             
             <tag> algorithm </tag>
             
+            <tag> leetcode面试经典150题 </tag>
+            
             <tag> 动态规划 </tag>
             
             <tag> 贪心 </tag>
-            
-            <tag> leetcode面试经典150题 </tag>
             
         </tags>
       
@@ -876,11 +1079,11 @@
             
             <tag> algorithm </tag>
             
+            <tag> leetcode面试经典150题 </tag>
+            
             <tag> 动态规划 </tag>
             
             <tag> 贪心 </tag>
-            
-            <tag> leetcode面试经典150题 </tag>
             
             <tag> 队列 </tag>
             
@@ -938,9 +1141,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> 动态规划 </tag>
-            
             <tag> leetcode面试经典150题 </tag>
+            
+            <tag> 动态规划 </tag>
             
         </tags>
       
@@ -967,9 +1170,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> 数组 </tag>
-            
             <tag> leetcode面试经典150题 </tag>
+            
+            <tag> 数组 </tag>
             
         </tags>
       
@@ -1108,9 +1311,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> 双指针 </tag>
-            
             <tag> leetcode面试经典150题 </tag>
+            
+            <tag> 双指针 </tag>
             
         </tags>
       
@@ -1137,9 +1340,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode每日一题 </tag>
-            
             <tag> 动态规划 </tag>
+            
+            <tag> leetcode每日一题 </tag>
             
         </tags>
       
@@ -1245,9 +1448,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> 双指针 </tag>
-            
             <tag> leetcode面试经典150题 </tag>
+            
+            <tag> 双指针 </tag>
             
         </tags>
       
@@ -1274,9 +1477,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode每日一题 </tag>
-            
             <tag> 排序 </tag>
+            
+            <tag> leetcode每日一题 </tag>
             
         </tags>
       
@@ -1384,11 +1587,11 @@
             
             <tag> algorithm </tag>
             
+            <tag> leetcode面试经典150题 </tag>
+            
             <tag> 双指针 </tag>
             
             <tag> 排序 </tag>
-            
-            <tag> leetcode面试经典150题 </tag>
             
         </tags>
       
@@ -1444,9 +1647,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode每日一题 </tag>
-            
             <tag> 双指针 </tag>
+            
+            <tag> leetcode每日一题 </tag>
             
         </tags>
       
@@ -1473,9 +1676,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode每日一题 </tag>
-            
             <tag> 动态规划 </tag>
+            
+            <tag> leetcode每日一题 </tag>
             
         </tags>
       
@@ -1531,9 +1734,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode每日一题 </tag>
-            
             <tag> 字符串 </tag>
+            
+            <tag> leetcode每日一题 </tag>
             
         </tags>
       
@@ -1560,9 +1763,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode每日一题 </tag>
-            
             <tag> 排序 </tag>
+            
+            <tag> leetcode每日一题 </tag>
             
         </tags>
       
@@ -1647,13 +1850,13 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode每日一题 </tag>
-            
             <tag> 字符串 </tag>
             
-            <tag> 设计题 </tag>
-            
             <tag> 哈希表 </tag>
+            
+            <tag> leetcode每日一题 </tag>
+            
+            <tag> 设计题 </tag>
             
         </tags>
       
@@ -1771,9 +1974,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode每日一题 </tag>
-            
             <tag> 字符串 </tag>
+            
+            <tag> leetcode每日一题 </tag>
             
         </tags>
       
@@ -1800,9 +2003,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode每日一题 </tag>
-            
             <tag> 哈希表 </tag>
+            
+            <tag> leetcode每日一题 </tag>
             
         </tags>
       
@@ -1829,9 +2032,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode每日一题 </tag>
-            
             <tag> 排序 </tag>
+            
+            <tag> leetcode每日一题 </tag>
             
         </tags>
       
@@ -1910,9 +2113,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode每日一题 </tag>
-            
             <tag> 排序 </tag>
+            
+            <tag> leetcode每日一题 </tag>
             
         </tags>
       
@@ -2014,9 +2217,9 @@
       
         <tags>
             
-            <tag> GNU </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> GNU </tag>
             
         </tags>
       
@@ -2191,9 +2394,9 @@
       
         <tags>
             
-            <tag> emacs </tag>
-            
             <tag> GNU </tag>
+            
+            <tag> emacs </tag>
             
         </tags>
       
@@ -2243,9 +2446,9 @@
       
         <tags>
             
-            <tag> emacs </tag>
-            
             <tag> GNU </tag>
+            
+            <tag> emacs </tag>
             
         </tags>
       
