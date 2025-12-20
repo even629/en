@@ -2459,14 +2459,7 @@
 
   
   <url>
-    <loc>https://even629.com/tags/Linux/</loc>
-    <lastmod>2025-12-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://even629.com/tags/GNU/</loc>
+    <loc>https://even629.com/tags/algorithm/</loc>
     <lastmod>2025-12-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2487,14 +2480,28 @@
   </url>
   
   <url>
-    <loc>https://even629.com/tags/DeviceTree/</loc>
+    <loc>https://even629.com/tags/Linux/</loc>
     <lastmod>2025-12-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://even629.com/tags/algorithm/</loc>
+    <loc>https://even629.com/tags/GNU/</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://even629.com/tags/Misc/</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://even629.com/tags/WSL/</loc>
     <lastmod>2025-12-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2522,14 +2529,7 @@
   </url>
   
   <url>
-    <loc>https://even629.com/tags/Misc/</loc>
-    <lastmod>2025-12-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://even629.com/tags/WSL/</loc>
+    <loc>https://even629.com/tags/DeviceTree/</loc>
     <lastmod>2025-12-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2676,14 +2676,14 @@
   </url>
   
   <url>
-    <loc>https://even629.com/tags/%E9%93%BE%E8%A1%A8/</loc>
+    <loc>https://even629.com/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</loc>
     <lastmod>2025-12-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://even629.com/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</loc>
+    <loc>https://even629.com/tags/%E9%93%BE%E8%A1%A8/</loc>
     <lastmod>2025-12-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2937,7 +2937,7 @@
 
   
   <url>
-    <loc>https://even629.com/categories/Linux/</loc>
+    <loc>https://even629.com/categories/algorithm/</loc>
     <lastmod>2025-12-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2951,14 +2951,7 @@
   </url>
   
   <url>
-    <loc>https://even629.com/categories/algorithm/</loc>
-    <lastmod>2025-12-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://even629.com/categories/programming/</loc>
+    <loc>https://even629.com/categories/Linux/</loc>
     <lastmod>2025-12-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2966,6 +2959,13 @@
   
   <url>
     <loc>https://even629.com/categories/Misc/</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://even629.com/categories/programming/</loc>
     <lastmod>2025-12-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
