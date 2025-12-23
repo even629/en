@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>常想一二，不思八九</title>
+  <icon>https://even629.com/icon.png</icon>
+  <subtitle>blog</subtitle>
+  <link href="https://even629.com/atom.xml" rel="self"/>
+  
+  <link href="https://even629.com/"/>
+  <updated>2025-12-23T11:55:13.000Z</updated>
+  <id>https://even629.com/</id>
+  
+  <author>
+    <name>even629</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux 单总线</title>
+    <link href="https://even629.com/posts/2512233/"/>
+    <id>https://even629.com/posts/2512233/</id>
+    <published>2025-12-23T11:55:13.000Z</published>
+    <updated>2025-12-23T11:55:13.000Z</updated>
+    
+    
+    <summary type="html">Linux 单总线</summary>
+    
+    
+    
+    <category term="Linux" scheme="https://even629.com/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://even629.com/tags/Linux/"/>
+    
+    <category term="GNU" scheme="https://even629.com/tags/GNU/"/>
+    
+    <category term="driver" scheme="https://even629.com/tags/driver/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试经典150题 P295 数据流的中位数</title>
+    <link href="https://even629.com/posts/295/"/>
+    <id>https://even629.com/posts/295/</id>
+    <published>2025-12-19T05:46:13.000Z</published>
+    <updated>2025-12-19T05:46:13.000Z</updated>
+    
+    
+    <summary type="html">堆</summary>
+    
+    
+    
+    <category term="algorithm" scheme="https://even629.com/categories/algorithm/"/>
+    
+    
+    <category term="algorithm" scheme="https://even629.com/tags/algorithm/"/>
+    
+    <category term="堆" scheme="https://even629.com/tags/%E5%A0%86/"/>
+    
+    <category term="leetcode面试经典150题" scheme="https://even629.com/tags/leetcode%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%85%B8150%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 输入子系统</title>
+    <link href="https://even629.com/posts/2512183/"/>
+    <id>https://even629.com/posts/2512183/</id>
+    <published>2025-12-18T12:31:13.000Z</published>
+    <updated>2025-12-18T12:31:13.000Z</updated>
+    
+    
+    <summary type="html">Linux 输入子系统</summary>
+    
+    
+    
+    <category term="Linux" scheme="https://even629.com/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://even629.com/tags/Linux/"/>
+    
+    <category term="GNU" scheme="https://even629.com/tags/GNU/"/>
+    
+    <category term="driver" scheme="https://even629.com/tags/driver/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试经典150题 P224 基本计算器</title>
+    <link href="https://even629.com/posts/224/"/>
+    <id>https://even629.com/posts/224/</id>
+    <published>2025-12-18T05:17:13.000Z</published>
+    <updated>2025-12-18T05:17:13.000Z</updated>
+    
+    
+    <summary type="html">栈</summary>
+    
+    
+    
+    <category term="algorithm" scheme="https://even629.com/categories/algorithm/"/>
+    
+    
+    <category term="algorithm" scheme="https://even629.com/tags/algorithm/"/>
+    
+    <category term="栈" scheme="https://even629.com/tags/%E6%A0%88/"/>
+    
+    <category term="leetcode面试经典150题" scheme="https://even629.com/tags/leetcode%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%85%B8150%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux gpio子系统</title>
+    <link href="https://even629.com/posts/2512173/"/>
+    <id>https://even629.com/posts/2512173/</id>
+    <published>2025-12-17T12:31:13.000Z</published>
+    <updated>2025-12-17T12:31:13.000Z</updated>
+    
+    
+    <summary type="html">Linux gpio子系统</summary>
+    
+    
+    
+    <category term="Linux" scheme="https://even629.com/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://even629.com/tags/Linux/"/>
+    
+    <category term="GNU" scheme="https://even629.com/tags/GNU/"/>
+    
+    <category term="driver" scheme="https://even629.com/tags/driver/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试经典150题 P188 买卖股票的最佳时机 IV</title>
+    <link href="https://even629.com/posts/188/"/>
+    <id>https://even629.com/posts/188/</id>
+    <published>2025-12-17T04:22:13.000Z</published>
+    <updated>2025-12-17T04:22:13.000Z</updated>
+    
+    
+    <summary type="html">动态规划</summary>
+    
+    
+    
+    <category term="algorithm" scheme="https://even629.com/categories/algorithm/"/>
+    
+    
+    <category term="algorithm" scheme="https://even629.com/tags/algorithm/"/>
+    
+    <category term="动态规划" scheme="https://even629.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="leetcode面试经典150题" scheme="https://even629.com/tags/leetcode%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%85%B8150%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试经典150题 P123 买卖股票的最佳时机 III</title>
+    <link href="https://even629.com/posts/123/"/>
+    <id>https://even629.com/posts/123/</id>
+    <published>2025-12-17T04:17:13.000Z</published>
+    <updated>2025-12-17T04:17:13.000Z</updated>
+    
+    
+    <summary type="html">动态规划</summary>
+    
+    
+    
+    <category term="algorithm" scheme="https://even629.com/categories/algorithm/"/>
+    
+    
+    <category term="algorithm" scheme="https://even629.com/tags/algorithm/"/>
+    
+    <category term="动态规划" scheme="https://even629.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="leetcode面试经典150题" scheme="https://even629.com/tags/leetcode%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%85%B8150%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux pinctrl 子系统</title>
+    <link href="https://even629.com/posts/2512160/"/>
+    <id>https://even629.com/posts/2512160/</id>
+    <published>2025-12-16T07:47:13.000Z</published>
+    <updated>2025-12-16T07:47:13.000Z</updated>
+    
+    
+    <summary type="html">基于Linux 5.10, 瑞芯微 rk3568 pinctrl 驱动分析</summary>
+    
+    
+    
+    <category term="Linux" scheme="https://even629.com/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://even629.com/tags/Linux/"/>
+    
+    <category term="GNU" scheme="https://even629.com/tags/GNU/"/>
+    
+    <category term="driver" scheme="https://even629.com/tags/driver/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试经典150题 P97 交错字符串</title>
+    <link href="https://even629.com/posts/97/"/>
+    <id>https://even629.com/posts/97/</id>
+    <published>2025-12-16T05:48:13.000Z</published>
+    <updated>2025-12-16T05:48:13.000Z</updated>
+    
+    
+    <summary type="html">动态规划</summary>
+    
+    
+    
+    <category term="algorithm" scheme="https://even629.com/categories/algorithm/"/>
+    
+    
+    <category term="algorithm" scheme="https://even629.com/tags/algorithm/"/>
+    
+    <category term="动态规划" scheme="https://even629.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="leetcode面试经典150题" scheme="https://even629.com/tags/leetcode%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%85%B8150%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试经典150题 P72 编辑距离</title>
+    <link href="https://even629.com/posts/72/"/>
+    <id>https://even629.com/posts/72/</id>
+    <published>2025-12-16T02:38:13.000Z</published>
+    <updated>2025-12-16T02:38:13.000Z</updated>
+    
+    
+    <summary type="html">动态规划</summary>
+    
+    
+    
+    <category term="algorithm" scheme="https://even629.com/categories/algorithm/"/>
+    
+    
+    <category term="algorithm" scheme="https://even629.com/tags/algorithm/"/>
+    
+    <category term="动态规划" scheme="https://even629.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="leetcode面试经典150题" scheme="https://even629.com/tags/leetcode%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%85%B8150%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试经典150题 P221 最大正方形</title>
+    <link href="https://even629.com/posts/221/"/>
+    <id>https://even629.com/posts/221/</id>
+    <published>2025-12-15T04:30:13.000Z</published>
+    <updated>2025-12-15T04:30:13.000Z</updated>
+    
+    
+    <summary type="html">动态规划</summary>
+    
+    
+    
+    <category term="algorithm" scheme="https://even629.com/categories/algorithm/"/>
+    
+    
+    <category term="algorithm" scheme="https://even629.com/tags/algorithm/"/>
+    
+    <category term="动态规划" scheme="https://even629.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="leetcode面试经典150题" scheme="https://even629.com/tags/leetcode%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%85%B8150%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试经典150题 P5 最长回文子串</title>
+    <link href="https://even629.com/posts/5/"/>
+    <id>https://even629.com/posts/5/</id>
+    <published>2025-12-15T02:48:13.000Z</published>
+    <updated>2025-12-15T02:48:13.000Z</updated>
+    
+    
+    <summary type="html">动态规划</summary>
+    
+    
+    
+    <category term="algorithm" scheme="https://even629.com/categories/algorithm/"/>
+    
+    
+    <category term="algorithm" scheme="https://even629.com/tags/algorithm/"/>
+    
+    <category term="动态规划" scheme="https://even629.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="leetcode面试经典150题" scheme="https://even629.com/tags/leetcode%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%85%B8150%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试经典150题 P63 不同路径 II</title>
+    <link href="https://even629.com/posts/63/"/>
+    <id>https://even629.com/posts/63/</id>
+    <published>2025-12-13T12:18:13.000Z</published>
+    <updated>2025-12-13T12:18:13.000Z</updated>
+    
+    
+    <summary type="html">动态规划</summary>
+    
+    
+    
+    <category term="algorithm" scheme="https://even629.com/categories/algorithm/"/>
+    
+    
+    <category term="algorithm" scheme="https://even629.com/tags/algorithm/"/>
+    
+    <category term="动态规划" scheme="https://even629.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="leetcode面试经典150题" scheme="https://even629.com/tags/leetcode%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%85%B8150%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试经典150题 P64 最小路径和</title>
+    <link href="https://even629.com/posts/64/"/>
+    <id>https://even629.com/posts/64/</id>
+    <published>2025-12-13T06:26:13.000Z</published>
+    <updated>2025-12-13T06:26:13.000Z</updated>
+    
+    
+    <summary type="html">动态规划</summary>
+    
+    
+    
+    <category term="algorithm" scheme="https://even629.com/categories/algorithm/"/>
+    
+    
+    <category term="algorithm" scheme="https://even629.com/tags/algorithm/"/>
+    
+    <category term="动态规划" scheme="https://even629.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="leetcode面试经典150题" scheme="https://even629.com/tags/leetcode%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%85%B8150%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试经典150题 P139 单词拆分</title>
+    <link href="https://even629.com/posts/139/"/>
+    <id>https://even629.com/posts/139/</id>
+    <published>2025-12-13T02:56:13.000Z</published>
+    <updated>2025-12-13T02:56:13.000Z</updated>
+    
+    
+    <summary type="html">动态规划</summary>
+    
+    
+    
+    <category term="algorithm" scheme="https://even629.com/categories/algorithm/"/>
+    
+    
+    <category term="algorithm" scheme="https://even629.com/tags/algorithm/"/>
+    
+    <category term="动态规划" scheme="https://even629.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="leetcode面试经典150题" scheme="https://even629.com/tags/leetcode%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%85%B8150%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试经典150题 P300 最长递增子序列</title>
+    <link href="https://even629.com/posts/300/"/>
+    <id>https://even629.com/posts/300/</id>
+    <published>2025-12-12T03:13:13.000Z</published>
+    <updated>2025-12-12T03:13:13.000Z</updated>
+    
+    
+    <summary type="html">动态规划</summary>
+    
+    
+    
+    <category term="algorithm" scheme="https://even629.com/categories/algorithm/"/>
+    
+    
+    <category term="algorithm" scheme="https://even629.com/tags/algorithm/"/>
+    
+    <category term="动态规划" scheme="https://even629.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="leetcode面试经典150题" scheme="https://even629.com/tags/leetcode%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%85%B8150%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试经典150题 P322 零钱兑换</title>
+    <link href="https://even629.com/posts/322/"/>
+    <id>https://even629.com/posts/322/</id>
+    <published>2025-12-12T02:26:13.000Z</published>
+    <updated>2025-12-12T02:26:13.000Z</updated>
+    
+    
+    <summary type="html">动态规划</summary>
+    
+    
+    
+    <category term="algorithm" scheme="https://even629.com/categories/algorithm/"/>
+    
+    
+    <category term="algorithm" scheme="https://even629.com/tags/algorithm/"/>
+    
+    <category term="动态规划" scheme="https://even629.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="leetcode面试经典150题" scheme="https://even629.com/tags/leetcode%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%85%B8150%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试经典150题 P198 打家劫舍</title>
+    <link href="https://even629.com/posts/198/"/>
+    <id>https://even629.com/posts/198/</id>
+    <published>2025-12-12T01:14:13.000Z</published>
+    <updated>2025-12-12T01:14:13.000Z</updated>
+    
+    
+    <summary type="html">动态规划</summary>
+    
+    
+    
+    <category term="algorithm" scheme="https://even629.com/categories/algorithm/"/>
+    
+    
+    <category term="algorithm" scheme="https://even629.com/tags/algorithm/"/>
+    
+    <category term="动态规划" scheme="https://even629.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="leetcode面试经典150题" scheme="https://even629.com/tags/leetcode%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%85%B8150%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试经典150题 P373 查找和最小的K对数字</title>
+    <link href="https://even629.com/posts/373/"/>
+    <id>https://even629.com/posts/373/</id>
+    <published>2025-12-08T09:30:13.000Z</published>
+    <updated>2025-12-08T09:30:13.000Z</updated>
+    
+    
+    <summary type="html">堆</summary>
+    
+    
+    
+    <category term="algorithm" scheme="https://even629.com/categories/algorithm/"/>
+    
+    
+    <category term="algorithm" scheme="https://even629.com/tags/algorithm/"/>
+    
+    <category term="堆" scheme="https://even629.com/tags/%E5%A0%86/"/>
+    
+    <category term="leetcode面试经典150题" scheme="https://even629.com/tags/leetcode%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%85%B8150%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试经典150题 P502 IPO</title>
+    <link href="https://even629.com/posts/502/"/>
+    <id>https://even629.com/posts/502/</id>
+    <published>2025-12-08T05:07:13.000Z</published>
+    <updated>2025-12-08T05:07:13.000Z</updated>
+    
+    
+    <summary type="html">堆排序</summary>
+    
+    
+    
+    <category term="algorithm" scheme="https://even629.com/categories/algorithm/"/>
+    
+    
+    <category term="algorithm" scheme="https://even629.com/tags/algorithm/"/>
+    
+    <category term="leetcode面试经典150题" scheme="https://even629.com/tags/leetcode%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%85%B8150%E9%A2%98/"/>
+    
+    <category term="堆排序" scheme="https://even629.com/tags/%E5%A0%86%E6%8E%92%E5%BA%8F/"/>
+    
+  </entry>
+  
+</feed>
