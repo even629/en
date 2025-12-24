@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://even629.com/posts/283/</loc>
+    <loc>https://even629.com/link/index.html</loc>
     
     <lastmod>2025-12-24</lastmod>
     
@@ -11,9 +11,27 @@
   </url>
   
   <url>
-    <loc>https://even629.com/link/index.html</loc>
+    <loc>https://even629.com/shuoshuo/index.html</loc>
     
-    <lastmod>2025-12-23</lastmod>
+    <lastmod>2025-12-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://even629.com/equipment/index.html</loc>
+    
+    <lastmod>2025-12-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://even629.com/posts/283/</loc>
+    
+    <lastmod>2025-12-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -29,27 +47,9 @@
   </url>
   
   <url>
-    <loc>https://even629.com/equipment/index.html</loc>
-    
-    <lastmod>2025-12-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://even629.com/charts/index.html</loc>
     
     <lastmod>2025-12-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://even629.com/shuoshuo/index.html</loc>
-    
-    <lastmod>2025-12-21</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2583,14 +2583,14 @@
   </url>
   
   <url>
-    <loc>https://even629.com/tags/ARM/</loc>
+    <loc>https://even629.com/tags/asm/</loc>
     <lastmod>2025-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://even629.com/tags/asm/</loc>
+    <loc>https://even629.com/tags/ARM/</loc>
     <lastmod>2025-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2919,14 +2919,14 @@
   </url>
   
   <url>
-    <loc>https://even629.com/tags/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/</loc>
+    <loc>https://even629.com/tags/%E6%B5%AE%E7%82%B9%E6%95%B0/</loc>
     <lastmod>2025-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://even629.com/tags/%E6%B5%AE%E7%82%B9%E6%95%B0/</loc>
+    <loc>https://even629.com/tags/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/</loc>
     <lastmod>2025-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3038,14 +3038,14 @@
   </url>
   
   <url>
-    <loc>https://even629.com/tags/OS/</loc>
+    <loc>https://even629.com/tags/network/</loc>
     <lastmod>2025-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://even629.com/tags/network/</loc>
+    <loc>https://even629.com/tags/OS/</loc>
     <lastmod>2025-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
